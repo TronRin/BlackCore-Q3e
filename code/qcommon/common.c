@@ -4884,6 +4884,7 @@ void Com_RandomBytes( byte *string, int len )
 }
 
 
+#if 0
 static qboolean strgtr(const char *s0, const char *s1) {
 	int l0, l1, i;
 
@@ -4904,6 +4905,7 @@ static qboolean strgtr(const char *s0, const char *s1) {
 	}
 	return qfalse;
 }
+#endif
 
 
 /*
@@ -4911,7 +4913,7 @@ static qboolean strgtr(const char *s0, const char *s1) {
 Com_SortList
 ==================
 */
-static void Com_SortList( char **list, int n )
+void Com_SortList( char **list, int n )
 {
 	const char *m;
 	char *temp;
@@ -4943,6 +4945,7 @@ static void Com_SortList( char **list, int n )
 Com_SortFileList
 ==================
 */
+#if 0
 void Com_SortFileList( char **list, int nfiles, int fastSort )
 {
 	if ( nfiles > 1 && fastSort )
@@ -4965,3 +4968,4 @@ void Com_SortFileList( char **list, int nfiles, int fastSort )
 		} while( flag );
 	}
 }
+#endif
